@@ -15,7 +15,7 @@ GOOGLE_APPLICATION_CREDENTIALS="/xxx/xxx/xxx.json"
 
 ## 命令使用
 
-![命令使用图解](http://cdn.mjava.top/blog/LFQ0Aaimage-20210617175510724.png)
+![命令使用图解](./flow.jpg)
 
 ### -t 选项
 设置推送的类型，默认为 `single`,可选值有：
