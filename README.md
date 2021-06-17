@@ -1,16 +1,31 @@
+## 快速开始
+你可以到 [Release](https://github.com/greycodee/seo-tools/releases/) 下载对应版本对应系统到压缩包，然后解压使用
+
+或者你也可以克隆源代码然后自己编译，这需要有 Go 的编程环境
+```shell
+git clone https://github.com/greycodee/seo-tools.git && cd seo-tools && go build .
+```
+编译完成后就可以得到一个二进制程序了
+
+这边示例一下推送一个网址到 baidu 站长上去
+> 执行命令前需要将百度站长上得到到 `Token` 设置成 `BING_API_KEY` 环境变量
+```shell
+./seo-tools -u https://example.com/index.html
+```
 ## 环境变量设置
+> 各个系统设置环境变量方式有所不同，请查询自己对应系统设置环境变量到方法
 ```shell
 # 站点域名【当要推送 Baidu 或 Bing 时设置】
-SITE_URL=http://blog.mjava.top
+export SITE_URL=http://blog.mjava.top
 
 # Bing apiKey 配置【当要推送 Bing 时设置】
-BING_API_KEY="xxxxxxx"
+export BING_API_KEY="xxxxxxx"
 
 # Baidu Token 配置【当要推送 Baidu 时设置】
-BAIDU_TOKEN="xxxxxxx"
+export BAIDU_TOKEN="xxxxxxx"
 
 # Google 密钥文件路径环境变量【当要推送 Google 时设置】
-GOOGLE_APPLICATION_CREDENTIALS="/xxx/xxx/xxx.json"
+export GOOGLE_APPLICATION_CREDENTIALS="/xxx/xxx/xxx.json"
 ```
 
 ## 命令使用
