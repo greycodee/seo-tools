@@ -14,24 +14,9 @@ GOOGLE_APPLICATION_CREDENTIALS="/xxx/xxx/xxx.json"
 ```
 
 ## 命令使用
-```mermaid
-graph TB
-    A(开始) --> B[选择推送类型]
-    B --> C[单条 Url推送]
-		C --> C1[seo-tool -u http://example.com/index.html]
-		C1 -->F{是否全部推送}
-    B --> D[urls 文件]
-    B --> E[sitemap站点地图]
-    F --> |是| G[无需额外加命令]
-    F --> |否| H[选择推送站长]
-    H --> I[只推送 Baidu] --> I1[-w baidu]
-    H --> J[只推送 Bing]--> J1[-w bing]
-    H --> K[只推送 Google]--> K1[-w google]
-    D --> D1[seo-tool -t urlsFile -f 文件地址]
-    E --> E1[seo-tool -t sitemap -f 文件地址]
-    D1 --> F
-    E1 --> F
-```
+
+![命令使用图解](http://cdn.mjava.top/blog/LFQ0Aaimage-20210617175510724.png)
+
 ### -t 选项
 设置推送的类型，默认为 `single`,可选值有：
 - single 单条 url 推送
