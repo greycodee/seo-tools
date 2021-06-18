@@ -10,7 +10,7 @@ git clone https://github.com/greycodee/seo-tools.git && cd seo-tools && go build
 这边示例一下推送一个网址到 baidu 站长上去
 > 执行命令前需要将百度站长上得到到 `Token` 设置成 `BING_API_KEY` 环境变量
 ```shell
-./seo-tools -u https://example.com/index.html
+./seo-tools -u https://example.com/index.html -w baidu
 ```
 ## 环境变量设置
 > 各个系统设置环境变量方式有所不同，请查询自己对应系统设置环境变量到方法
