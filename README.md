@@ -81,6 +81,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/xxx/xxx/xxx.json"
 
 ### -w 选项
 > 默认是全部推送
+> 推送到 Google 时记得开启【科学上网】，否则会出现 `Post "https://indexing.googleapis.com/v3/urlNotifications:publish?alt=json&prettyPrint=false": oauth2: cannot fetch token: Post "https://oauth2.googleapis.com/token": read tcp 192.168.31.175:50338->172.217.160.74:443: read: connection reset by peer` 错误
 
 选择要推送当站长，可选项：
 - baidu
