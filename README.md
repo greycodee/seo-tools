@@ -8,7 +8,7 @@ git clone https://github.com/greycodee/seo-tools.git && cd seo-tools && go build
 编译完成后就可以得到一个二进制程序了
 
 这边示例一下推送一个网址到 baidu 站长上去
-> 执行命令前需要将百度站长上得到到 `Token` 设置成 `BING_API_KEY` 环境变量
+> 执行命令前需要将百度站长上得到到 `Token` 设置成 `BAIDU_TOKEN` 环境变量
 ```shell
 ./seo-tools -u https://example.com/index.html -w baidu
 ```
