@@ -52,7 +52,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/xxx/xxx/xxx.json"
           <loc>http://blog.mjava.top/gof/gof-singleton/</loc>
           <lastmod>2021-06-15T07:14:24.487Z</lastmod>
       </url>
-     </urlset>
+    </urlset>
   ```
 
 ### -u 选项
