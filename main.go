@@ -16,6 +16,7 @@ var (
 	pushType string
 	filePath string
 	webMaster string
+	pushCount int
 )
 
 func init() {
@@ -26,6 +27,7 @@ func init() {
 	flag.StringVar(&filePath,"f","","local file path or remote file path\n(Used when the -t parameter is urlsFile or sitemap)")
 
 	flag.StringVar(&webMaster,"w","all","chose webmaster service:\n	google\n	baidu\n	bing\n")
+	flag.IntVar(&pushCount,"n",0,"push count.If not configured, all are pushed by default. Only valid for sitemap")
 	flag.Parse()
 }
 func main()  {
@@ -57,12 +59,13 @@ func singlePush()  {
 }
 
 func urlsFilePush()  {
-	p := new(parse.UrlsFile)
+	p := parse.NewSiteMap(pushCount)
 	parseFileAndPush(p)
 }
 
 func sitemapPush()  {
-	p := new(parse.SiteMap)
+	p := parse.NewSiteMap(pushCount)
+	//var p = &parse.SiteMap{2}
 	parseFileAndPush(p)
 }
 

@@ -18,7 +18,11 @@ import (
 	</urlset>
 */
 type SiteMap struct {
+	urlCount int
+}
 
+func NewSiteMap(pushCount int) *SiteMap {
+	return &SiteMap{pushCount}
 }
 
 type urlSet struct {
@@ -46,7 +50,7 @@ func (s SiteMap) ParseRemoteFile(url string) (urls []string,err error) {
 	if err != nil {
 		return
 	}
-	return parseXml(content)
+	return s.parseXml(content)
 }
 
 func (s SiteMap) ParseLocalFile(filePath string) (urls []string,err error) {
@@ -64,16 +68,19 @@ func (s SiteMap) ParseLocalFile(filePath string) (urls []string,err error) {
 	if err != nil {
 		return
 	}
-	return parseXml(content)
+	return s.parseXml(content)
 }
 
 
-func parseXml(content []byte)  (urls []string,err error) {
+func (s SiteMap) parseXml(content []byte)  (urls []string,err error) {
 	log.Println("开始解析XML")
 	sm := urlSet{}
 	err = xml.Unmarshal(content, &sm)
 	if err != nil {
 		return
+	}
+	if s.urlCount>0 {
+		sm.Url = sm.Url[:s.urlCount]
 	}
 	for _,v := range sm.Url{
 		log.Printf("【SITE-MAP】解析到url：%s",v.Loc)
