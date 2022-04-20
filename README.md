@@ -99,3 +99,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/xxx/xxx/xxx.json"
 # 只推送到谷歌站长
 ./seo-tools -u https://example.com/test.html -w google
 ```
+
+## 更新版本
+
+- v1.1.0: 支持 Sitemap 自定义推送条数，在推送时配置 -n 参数,比如推送前 10 条,可以配置 -n 10。不配置默认推送全部
