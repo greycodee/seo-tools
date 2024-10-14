@@ -14,7 +14,7 @@ git clone https://github.com/greycodee/seo-tools.git && cd seo-tools && go build
 ```
 ## 环境变量设置
 > 各个系统设置环境变量方式有所不同，请查询自己对应系统设置环境变量到方法。密钥申请方法请查看：[百度、谷歌、必应三大站长API密钥申请流程
-](https://greycode.top/posts/c334612cbdce41e79f7ea6a2f3f4c10c/)
+](https://blog.greycode.top/posts/c334612cbdce41e79f7ea6a2f3f4c10c/)
 ```shell
 # 你的站点域名【当要推送 Baidu 或 Bing 时设置】
 export SITE_URL=http://example.com
